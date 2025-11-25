@@ -68,8 +68,8 @@ public class LeaderBoardServiceImpl implements LeaderBoardService {
   }
 
   @Override
-//  @Cacheable(value = "topUsersLeaderboard",
-//      key = "'top' + #pageable.pageNumber + '_' + #pageable.pageSize")
+  @Cacheable(value = "topUsersLeaderboard",
+      key = "'top' + #pageable.pageNumber + '_' + #pageable.pageSize")
   public ApiResponseObject<LeaderBoardPageModel> getTopUsersFromLeaderboard(Pageable pageable) {
     ApiResponseObject<LeaderBoardPageModel> response =
         new ApiResponseObject<>(ApiStatusCode.SUCCESS);

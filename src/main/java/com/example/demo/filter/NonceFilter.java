@@ -14,10 +14,10 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-//@Component
+@Component
 public class NonceFilter implements Filter {
 
-//  @Autowired
+  @Autowired
   private RedisTemplate<String, String> redis;
 
   private static final long NONCE_TTL_SECONDS = 1;

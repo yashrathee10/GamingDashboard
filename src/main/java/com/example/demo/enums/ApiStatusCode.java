@@ -22,7 +22,7 @@ public enum ApiStatusCode {
   }
 
   public String getName() {
-    return this.name(); // required for JSON enum serialization
+    return this.name();
   }
 
 }

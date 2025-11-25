@@ -13,7 +13,7 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
-//@Configuration
+@Configuration
 public class RedisConfig {
 
   @Bean

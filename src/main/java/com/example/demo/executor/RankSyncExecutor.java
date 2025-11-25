@@ -3,6 +3,7 @@ package com.example.demo.executor;
 import com.example.demo.service.LeaderBoardService;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 @EnableAsync
@@ -16,7 +17,7 @@ public class RankSyncExecutor {
     this.leaderBoardService = leaderBoardService;
   }
 
-  //  @Scheduled(cron = "${gamingDashboard.sync.ranks.cron}", zone = "UTC")
+  @Scheduled(cron = "${gamingDashboard.sync.ranks.cron}", zone = "UTC")
   public void syncRanks() {
     leaderBoardService.refreshRanks();
   }

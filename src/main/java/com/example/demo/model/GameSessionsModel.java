@@ -27,8 +27,8 @@ public class GameSessionsModel {
   private Long userId;
 
   @NotNull
-//  @Min(0)
-//  @Max(1000)
+  @Min(0)
+  @Max(1000)
   private Long score;
 
   @JsonProperty("game_mode")
